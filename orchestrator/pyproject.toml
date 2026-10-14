@@ -1,8 +1,11 @@
 [project]
 name = "tsfuzz"
 version = "0.1.0"
-description = "Orchestrator for break-x862 injector backends"
+description = "Orchestrator for Veritas86 injector backends"
 requires-python = ">=3.10"
+
+[project.urls]
+repository = "https://github.com/vajradevam/veritas86"
 
 [tool.setuptools]
 packages = ["tsfuzz", "tsfuzz.backends"]

@@ -1,5 +1,7 @@
 # Veritas86
 
+[github.com/vajradevam/veritas86](https://github.com/vajradevam/veritas86)
+
 A black-box x86 instruction-set auditor. It single-steps candidate byte
 strings on real ring-3 hardware, classifies what the chip actually does
 with each one from the fault it raises (or doesn't), and diffs that
@@ -48,6 +50,8 @@ scripts/              safety preflight checks, environment probing
 ## Quick start
 
 ```sh
+git clone https://github.com/vajradevam/veritas86.git
+cd veritas86
 just build     # build core/injector + core/tests
 just smoke     # safety preflight, then known-answer tests -- run this before anything else
 just pytest    # orchestrator-level tests against the real injector subprocess
