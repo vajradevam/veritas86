@@ -1,4 +1,4 @@
-# Veritas86 — Do We Trust Silicon?
+# Veritas86
 
 A black-box x86 instruction-set auditor. It single-steps candidate byte
 strings on real ring-3 hardware, classifies what the chip actually does
