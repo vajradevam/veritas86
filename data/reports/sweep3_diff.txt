@@ -1,0 +1,228 @@
+== 6 runs loaded ==
+  d153-system      Intel(R) Core(TM) i7-9700T CPU @ 2.00GHz      microcode=0x104    n=9992
+  debian           11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz microcode=0xbc     n=9992
+  fuzzarch         Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz      microcode=0xf6     n=9992
+  imac             Intel(R) Core(TM) i5-4570R CPU @ 2.70GHz      microcode=0x1c     n=9992
+  lily             11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz microcode=0xb6     n=9992
+  z420             Intel(R) Xeon(R) CPU E5-1607 0 @ 3.00GHz      microcode=0x71a    n=9992
+
+== 824 / 9992 (label,state) rows diverge across runs ==
+
+  avx512_kmovw_k0_eax      state=scratch_v1  enc=c5f893c0                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  avx512_kmovw_k0_eax      state=zero_v1     enc=c5f893c0                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  avx512_vaddps_zmm        state=scratch_v1  enc=62f17c4858c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  avx512_vaddps_zmm        state=zero_v1     enc=62f17c4858c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  avx512_vcmpeqps_k0       state=scratch_v1  enc=62f17c48c2c100                   d153-system=7/UD  debian=7/NONE  fuzzarch=7/UD  imac=2/UD  lily=7/NONE  z420=2/UD
+  avx512_vcmpeqps_k0       state=zero_v1     enc=62f17c48c2c100                   d153-system=7/UD  debian=7/NONE  fuzzarch=7/UD  imac=2/UD  lily=7/NONE  z420=2/UD
+  avx512_vmulpd_zmm        state=scratch_v1  enc=62f1fd4859c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  avx512_vmulpd_zmm        state=zero_v1     enc=62f1fd4859c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  avx512_vpaddd_zmm        state=scratch_v1  enc=62f17d48fec1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  avx512_vpaddd_zmm        state=zero_v1     enc=62f17d48fec1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  crypto_gather_avx2_vpgatherdd state=scratch_v1  enc=c4e27d900c97                     d153-system=6/NONE  debian=6/GP_OR_PF  fuzzarch=6/NONE  imac=6/NONE  lily=6/NONE  z420=6/UD
+  crypto_gather_avx2_vpgatherdd state=zero_v1     enc=c4e27d900c97                     d153-system=6/NONE  debian=6/NONE  fuzzarch=6/NONE  imac=6/NONE  lily=6/NONE  z420=6/UD
+  crypto_gather_avx512_vpgatherdd state=scratch_v1  enc=62f27d4990048f                   d153-system=7/UD  debian=7/NONE  fuzzarch=7/UD  imac=2/UD  lily=7/NONE  z420=2/UD
+  crypto_gather_avx512_vpgatherdd state=zero_v1     enc=62f27d4990048f                   d153-system=7/UD  debian=7/NONE  fuzzarch=7/UD  imac=2/UD  lily=7/NONE  z420=2/UD
+  crypto_rdpid             state=scratch_v1  enc=f30fc7f8                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  crypto_rdpid             state=zero_v1     enc=f30fc7f8                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  feat_avx2_vpaddd_ymm     state=scratch_v1  enc=c5fdfec1                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=4/NONE  z420=4/UD
+  feat_avx2_vpaddd_ymm     state=zero_v1     enc=c5fdfec1                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=4/NONE  z420=4/UD
+  feat_avx512bitalg_vpopcntb state=scratch_v1  enc=62f27d4854c0                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  feat_avx512bitalg_vpopcntb state=zero_v1     enc=62f27d4854c0                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  feat_avx512vnni_vpdpbusd state=scratch_v1  enc=62f2754850c2                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  feat_avx512vnni_vpdpbusd state=zero_v1     enc=62f2754850c2                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  feat_bmi1_andn           state=scratch_v1  enc=c4e2c0f2c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi1_andn           state=zero_v1     enc=c4e2c0f2c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi2_pdep           state=scratch_v1  enc=c4e2c3f5c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi2_pdep           state=zero_v1     enc=c4e2c3f5c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi2_pext           state=scratch_v1  enc=c4e2c2f5c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi2_pext           state=zero_v1     enc=c4e2c2f5c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/NONE  lily=5/NONE  z420=5/UD
+  feat_fma_vfmadd132ps     state=scratch_v1  enc=c4e26d98c1                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/NONE  lily=5/NONE  z420=5/UD
+  feat_fma_vfmadd132ps     state=zero_v1     enc=c4e26d98c1                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/NONE  lily=5/NONE  z420=5/UD
+  feat_gfni_vgf2p8affineqb state=scratch_v1  enc=c4e3f9cec100                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=6/UD  lily=6/NONE  z420=6/UD
+  feat_gfni_vgf2p8affineqb state=zero_v1     enc=c4e3f9cec100                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=6/UD  lily=6/NONE  z420=6/UD
+  feat_shani_sha256rnds2   state=scratch_v1  enc=0f38cbc1                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  feat_shani_sha256rnds2   state=zero_v1     enc=0f38cbc1                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  feat_vaes_vaesenc_zmm    state=scratch_v1  enc=62f27d48dcc1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  feat_vaes_vaesenc_zmm    state=zero_v1     enc=62f27d48dcc1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  imac=2/UD  lily=6/NONE  z420=2/UD
+  grp0f01full_modrm00      state=scratch_v1  enc=0f0100                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm01      state=scratch_v1  enc=0f0101                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm02      state=scratch_v1  enc=0f0102                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm03      state=scratch_v1  enc=0f0103                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm05      state=scratch_v1  enc=0f0105                           d153-system=0/BOUNDARY_PF  debian=8/GP_OR_PF  fuzzarch=0/BOUNDARY_PF  imac=0/BOUNDARY_PF  lily=8/GP_OR_PF  z420=0/BOUNDARY_PF
+  grp0f01full_modrm05      state=zero_v1     enc=0f0105                           d153-system=0/BOUNDARY_PF  debian=8/GP_OR_PF  fuzzarch=0/BOUNDARY_PF  imac=0/BOUNDARY_PF  lily=8/GP_OR_PF  z420=0/BOUNDARY_PF
+  grp0f01full_modrm06      state=scratch_v1  enc=0f0106                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm07      state=scratch_v1  enc=0f0107                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm08      state=scratch_v1  enc=0f0108                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm09      state=scratch_v1  enc=0f0109                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm0a      state=scratch_v1  enc=0f010a                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm0b      state=scratch_v1  enc=0f010b                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm0d      state=scratch_v1  enc=0f010d                           d153-system=0/BOUNDARY_PF  debian=8/GP_OR_PF  fuzzarch=0/BOUNDARY_PF  imac=0/BOUNDARY_PF  lily=8/GP_OR_PF  z420=0/BOUNDARY_PF
+  grp0f01full_modrm0d      state=zero_v1     enc=0f010d                           d153-system=0/BOUNDARY_PF  debian=8/GP_OR_PF  fuzzarch=0/BOUNDARY_PF  imac=0/BOUNDARY_PF  lily=8/GP_OR_PF  z420=0/BOUNDARY_PF
+  grp0f01full_modrm0e      state=scratch_v1  enc=0f010e                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm0f      state=scratch_v1  enc=0f010f                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm20      state=scratch_v1  enc=0f0120                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm21      state=scratch_v1  enc=0f0121                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm22      state=scratch_v1  enc=0f0122                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm23      state=scratch_v1  enc=0f0123                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm25      state=scratch_v1  enc=0f0125                           d153-system=9/NONE  debian=8/GP_OR_PF  fuzzarch=9/NONE  imac=9/NONE  lily=8/GP_OR_PF  z420=9/NONE
+  grp0f01full_modrm25      state=zero_v1     enc=0f0125                           d153-system=9/NONE  debian=8/GP_OR_PF  fuzzarch=9/NONE  imac=9/NONE  lily=8/GP_OR_PF  z420=9/NONE
+  grp0f01full_modrm26      state=scratch_v1  enc=0f0126                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm27      state=scratch_v1  enc=0f0127                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrm40      state=scratch_v1  enc=0f0140                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm41      state=scratch_v1  enc=0f0141                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm42      state=scratch_v1  enc=0f0142                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm43      state=scratch_v1  enc=0f0143                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm45      state=scratch_v1  enc=0f0145                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm46      state=scratch_v1  enc=0f0146                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm47      state=scratch_v1  enc=0f0147                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm48      state=scratch_v1  enc=0f0148                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm49      state=scratch_v1  enc=0f0149                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm4a      state=scratch_v1  enc=0f014a                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm4b      state=scratch_v1  enc=0f014b                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm4d      state=scratch_v1  enc=0f014d                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm4e      state=scratch_v1  enc=0f014e                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm4f      state=scratch_v1  enc=0f014f                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm60      state=scratch_v1  enc=0f0160                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm61      state=scratch_v1  enc=0f0161                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm62      state=scratch_v1  enc=0f0162                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm63      state=scratch_v1  enc=0f0163                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm65      state=scratch_v1  enc=0f0165                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm66      state=scratch_v1  enc=0f0166                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm67      state=scratch_v1  enc=0f0167                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  imac=4/NONE  lily=6/NONE  z420=4/NONE
+  grp0f01full_modrm80      state=scratch_v1  enc=0f0180                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm81      state=scratch_v1  enc=0f0181                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm82      state=scratch_v1  enc=0f0182                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm83      state=scratch_v1  enc=0f0183                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm85      state=scratch_v1  enc=0f0185                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm86      state=scratch_v1  enc=0f0186                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm87      state=scratch_v1  enc=0f0187                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm88      state=scratch_v1  enc=0f0188                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm89      state=scratch_v1  enc=0f0189                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm8a      state=scratch_v1  enc=0f018a                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm8b      state=scratch_v1  enc=0f018b                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm8d      state=scratch_v1  enc=0f018d                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm8e      state=scratch_v1  enc=0f018e                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrm8f      state=scratch_v1  enc=0f018f                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrma0      state=scratch_v1  enc=0f01a0                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrma1      state=scratch_v1  enc=0f01a1                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrma2      state=scratch_v1  enc=0f01a2                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrma3      state=scratch_v1  enc=0f01a3                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrma5      state=scratch_v1  enc=0f01a5                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrma6      state=scratch_v1  enc=0f01a6                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrma7      state=scratch_v1  enc=0f01a7                           d153-system=7/NONE  debian=9/NONE  fuzzarch=7/NONE  imac=7/NONE  lily=9/NONE  z420=7/NONE
+  grp0f01full_modrmc1      state=scratch_v1  enc=0f01c1                           d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  imac=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmc1      state=zero_v1     enc=0f01c1                           d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  imac=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmc2      state=scratch_v1  enc=0f01c2                           d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  imac=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmc2      state=zero_v1     enc=0f01c2                           d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  imac=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmc3      state=scratch_v1  enc=0f01c3                           d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  imac=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmc3      state=zero_v1     enc=0f01c3                           d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  imac=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmc4      state=scratch_v1  enc=0f01c4                           d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  imac=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmc4      state=zero_v1     enc=0f01c4                           d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  imac=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmd5      state=scratch_v1  enc=0f01d5                           d153-system=3/GP_OR_PF  debian=3/UD  fuzzarch=3/UD  imac=3/UD  lily=3/UD  z420=3/UD
+  grp0f01full_modrmd5      state=zero_v1     enc=0f01d5                           d153-system=3/GP_OR_PF  debian=3/UD  fuzzarch=3/UD  imac=3/UD  lily=3/UD  z420=3/UD
+  grp0f01full_modrmd6      state=scratch_v1  enc=0f01d6                           d153-system=3/NONE  debian=3/UD  fuzzarch=3/UD  imac=3/UD  lily=3/UD  z420=3/UD
+  grp0f01full_modrmd6      state=zero_v1     enc=0f01d6                           d153-system=3/NONE  debian=3/UD  fuzzarch=3/UD  imac=3/UD  lily=3/UD  z420=3/UD
+  grp0f01full_modrme0      state=scratch_v1  enc=0f01e0                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrme0      state=zero_v1     enc=0f01e0                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrme1      state=scratch_v1  enc=0f01e1                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrme1      state=zero_v1     enc=0f01e1                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrme2      state=scratch_v1  enc=0f01e2                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrme2      state=zero_v1     enc=0f01e2                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrme3      state=scratch_v1  enc=0f01e3                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrme3      state=zero_v1     enc=0f01e3                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrme4      state=scratch_v1  enc=0f01e4                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrme4      state=zero_v1     enc=0f01e4                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrme5      state=scratch_v1  enc=0f01e5                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrme5      state=zero_v1     enc=0f01e5                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrme6      state=scratch_v1  enc=0f01e6                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrme6      state=zero_v1     enc=0f01e6                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrme7      state=scratch_v1  enc=0f01e7                           d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  imac=3/NONE  lily=5/NONE  z420=3/NONE
+  grp0f01full_modrme7      state=zero_v1     enc=0f01e7                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  imac=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp0f01full_modrmee      state=scratch_v1  enc=0f01ee                           d153-system=3/UD  debian=3/GP_OR_PF  fuzzarch=3/UD  imac=3/UD  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmee      state=zero_v1     enc=0f01ee                           d153-system=3/UD  debian=3/NONE  fuzzarch=3/UD  imac=3/UD  lily=3/NONE  z420=3/UD
+  grp0f01full_modrmef      state=scratch_v1  enc=0f01ef                           d153-system=3/UD  debian=3/GP_OR_PF  fuzzarch=3/UD  imac=3/UD  lily=3/GP_OR_PF  z420=3/UD
+  grp0f01full_modrmef      state=zero_v1     enc=0f01ef                           d153-system=3/UD  debian=3/NONE  fuzzarch=3/UD  imac=3/UD  lily=3/NONE  z420=3/UD
+  grp0fae66_30             state=scratch_v1  enc=660fae30                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_30             state=zero_v1     enc=660fae30                         d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_31             state=scratch_v1  enc=660fae31                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_31             state=zero_v1     enc=660fae31                         d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_32             state=scratch_v1  enc=660fae32                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_32             state=zero_v1     enc=660fae32                         d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_33             state=scratch_v1  enc=660fae33                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_33             state=zero_v1     enc=660fae33                         d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_34             state=scratch_v1  enc=660fae34                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_34             state=zero_v1     enc=660fae34                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_35             state=scratch_v1  enc=660fae35                         d153-system=8/UD  debian=9/NONE  fuzzarch=8/UD  imac=8/UD  lily=9/NONE  z420=8/UD
+  grp0fae66_35             state=zero_v1     enc=660fae35                         d153-system=8/UD  debian=9/NONE  fuzzarch=8/UD  imac=8/UD  lily=9/NONE  z420=8/UD
+  grp0fae66_36             state=scratch_v1  enc=660fae36                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_36             state=zero_v1     enc=660fae36                         d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_37             state=scratch_v1  enc=660fae37                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_37             state=zero_v1     enc=660fae37                         d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_38             state=scratch_v1  enc=660fae38                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_38             state=zero_v1     enc=660fae38                         d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_39             state=scratch_v1  enc=660fae39                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_39             state=zero_v1     enc=660fae39                         d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_3a             state=scratch_v1  enc=660fae3a                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_3a             state=zero_v1     enc=660fae3a                         d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_3b             state=scratch_v1  enc=660fae3b                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_3b             state=zero_v1     enc=660fae3b                         d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_3c             state=scratch_v1  enc=660fae3c                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_3c             state=zero_v1     enc=660fae3c                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_3d             state=scratch_v1  enc=660fae3d                         d153-system=9/NONE  debian=9/NONE  fuzzarch=9/NONE  imac=8/UD  lily=9/NONE  z420=8/UD
+  grp0fae66_3d             state=zero_v1     enc=660fae3d                         d153-system=9/NONE  debian=9/NONE  fuzzarch=9/NONE  imac=8/UD  lily=9/NONE  z420=8/UD
+  grp0fae66_3e             state=scratch_v1  enc=660fae3e                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_3e             state=zero_v1     enc=660fae3e                         d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_3f             state=scratch_v1  enc=660fae3f                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  imac=4/UD  lily=4/NONE  z420=4/UD
+  grp0fae66_3f             state=zero_v1     enc=660fae3f                         d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  imac=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  grp0fae66_70             state=scratch_v1  enc=660fae70                         d153-system=5/UD  debian=5/NONE  fuzzarch=5/UD  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_70             state=zero_v1     enc=660fae70                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_71             state=scratch_v1  enc=660fae71                         d153-system=5/UD  debian=5/NONE  fuzzarch=5/UD  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_71             state=zero_v1     enc=660fae71                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_72             state=scratch_v1  enc=660fae72                         d153-system=5/UD  debian=5/NONE  fuzzarch=5/UD  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_72             state=zero_v1     enc=660fae72                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_73             state=scratch_v1  enc=660fae73                         d153-system=5/UD  debian=5/NONE  fuzzarch=5/UD  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_73             state=zero_v1     enc=660fae73                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_74             state=scratch_v1  enc=660fae74                         d153-system=6/UD  debian=6/GP_OR_PF  fuzzarch=6/UD  imac=6/UD  lily=6/GP_OR_PF  z420=6/UD
+  grp0fae66_74             state=zero_v1     enc=660fae74                         d153-system=6/UD  debian=6/GP_OR_PF  fuzzarch=6/UD  imac=6/UD  lily=6/GP_OR_PF  z420=6/UD
+  grp0fae66_75             state=scratch_v1  enc=660fae75                         d153-system=5/UD  debian=5/NONE  fuzzarch=5/UD  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_75             state=zero_v1     enc=660fae75                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_76             state=scratch_v1  enc=660fae76                         d153-system=5/UD  debian=5/NONE  fuzzarch=5/UD  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_76             state=zero_v1     enc=660fae76                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_77             state=scratch_v1  enc=660fae77                         d153-system=5/UD  debian=5/NONE  fuzzarch=5/UD  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_77             state=zero_v1     enc=660fae77                         d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_78             state=scratch_v1  enc=660fae78                         d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_78             state=zero_v1     enc=660fae78                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_79             state=scratch_v1  enc=660fae79                         d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_79             state=zero_v1     enc=660fae79                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_7a             state=scratch_v1  enc=660fae7a                         d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_7a             state=zero_v1     enc=660fae7a                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_7b             state=scratch_v1  enc=660fae7b                         d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_7b             state=zero_v1     enc=660fae7b                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_7c             state=scratch_v1  enc=660fae7c                         d153-system=6/GP_OR_PF  debian=6/GP_OR_PF  fuzzarch=6/GP_OR_PF  imac=6/UD  lily=6/GP_OR_PF  z420=6/UD
+  grp0fae66_7c             state=zero_v1     enc=660fae7c                         d153-system=6/GP_OR_PF  debian=6/GP_OR_PF  fuzzarch=6/GP_OR_PF  imac=6/UD  lily=6/GP_OR_PF  z420=6/UD
+  grp0fae66_7d             state=scratch_v1  enc=660fae7d                         d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_7d             state=zero_v1     enc=660fae7d                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_7e             state=scratch_v1  enc=660fae7e                         d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_7e             state=zero_v1     enc=660fae7e                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_7f             state=scratch_v1  enc=660fae7f                         d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  imac=5/UD  lily=5/NONE  z420=5/UD
+  grp0fae66_7f             state=zero_v1     enc=660fae7f                         d153-system=5/GP_OR_PF  debian=5/GP_OR_PF  fuzzarch=5/GP_OR_PF  imac=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  grp0fae66_b0             state=scratch_v1  enc=660faeb0                         d153-system=8/UD  debian=8/NONE  fuzzarch=8/UD  imac=8/UD  lily=8/NONE  z420=8/UD
+  grp0fae66_b0             state=zero_v1     enc=660faeb0                         d153-system=8/UD  debian=8/GP_OR_PF  fuzzarch=8/UD  imac=8/UD  lily=8/GP_OR_PF  z420=8/UD
+  ... (624 more rows omitted, see by-pattern summary below)
+
+(* = post-execution RIP left the arena, e.g. a control-flow instr like ret/jmp -- expected, not a bug)
+
+== divergence patterns (fault-class tuple -> count) ==
+  {'d153-system': 'GP_OR_PF', 'debian': 'GP_OR_PF', 'fuzzarch': 'GP_OR_PF', 'imac': 'GP_OR_PF', 'lily': 'GP_OR_PF', 'z420': 'UD'}: 213 encodings, e.g. [('grp0f01full_modrmc1', 'scratch_v1'), ('grp0f01full_modrmc1', 'zero_v1'), ('grp0f01full_modrmc2', 'scratch_v1'), ('grp0f01full_modrmc2', 'zero_v1'), ('grp0f01full_modrmc3', 'scratch_v1')]
+  {'d153-system': 'NONE', 'debian': 'NONE', 'fuzzarch': 'NONE', 'imac': 'NONE', 'lily': 'NONE', 'z420': 'UD'}: 176 encodings, e.g. [('crypto_gather_avx2_vpgatherdd', 'zero_v1'), ('feat_avx2_vpaddd_ymm', 'scratch_v1'), ('feat_avx2_vpaddd_ymm', 'zero_v1'), ('feat_bmi1_andn', 'scratch_v1'), ('feat_bmi1_andn', 'zero_v1')]
+  {'d153-system': 'GP_OR_PF', 'debian': 'GP_OR_PF', 'fuzzarch': 'GP_OR_PF', 'imac': 'UD', 'lily': 'GP_OR_PF', 'z420': 'UD'}: 151 encodings, e.g. [('grp0fae66_38', 'zero_v1'), ('grp0fae66_39', 'zero_v1'), ('grp0fae66_3a', 'zero_v1'), ('grp0fae66_3b', 'zero_v1'), ('grp0fae66_3c', 'scratch_v1')]
+  {'d153-system': 'NONE', 'debian': 'NONE', 'fuzzarch': 'NONE', 'imac': 'NONE', 'lily': 'NONE', 'z420': 'NONE'}: 79 encodings, e.g. [('grp0f01full_modrm00', 'scratch_v1'), ('grp0f01full_modrm01', 'scratch_v1'), ('grp0f01full_modrm02', 'scratch_v1'), ('grp0f01full_modrm03', 'scratch_v1'), ('grp0f01full_modrm06', 'scratch_v1')]
+  {'d153-system': 'UD', 'debian': 'NONE', 'fuzzarch': 'UD', 'imac': 'UD', 'lily': 'NONE', 'z420': 'UD'}: 66 encodings, e.g. [('avx512_kmovw_k0_eax', 'scratch_v1'), ('avx512_kmovw_k0_eax', 'zero_v1'), ('avx512_vaddps_zmm', 'scratch_v1'), ('avx512_vaddps_zmm', 'zero_v1'), ('avx512_vcmpeqps_k0', 'scratch_v1')]
+  {'d153-system': 'NONE', 'debian': 'NONE', 'fuzzarch': 'NONE', 'imac': 'UD', 'lily': 'NONE', 'z420': 'UD'}: 61 encodings, e.g. [('grp0fae66_38', 'scratch_v1'), ('grp0fae66_39', 'scratch_v1'), ('grp0fae66_3a', 'scratch_v1'), ('grp0fae66_3b', 'scratch_v1'), ('grp0fae66_3d', 'scratch_v1')]
+  {'d153-system': 'UD', 'debian': 'GP_OR_PF', 'fuzzarch': 'UD', 'imac': 'UD', 'lily': 'GP_OR_PF', 'z420': 'UD'}: 48 encodings, e.g. [('grp0f01full_modrmee', 'scratch_v1'), ('grp0f01full_modrmef', 'scratch_v1'), ('grp0fae66_30', 'zero_v1'), ('grp0fae66_31', 'zero_v1'), ('grp0fae66_32', 'zero_v1')]
+  {'d153-system': 'NONE', 'debian': 'GP_OR_PF', 'fuzzarch': 'NONE', 'imac': 'NONE', 'lily': 'GP_OR_PF', 'z420': 'NONE'}: 17 encodings, e.g. [('grp0f01full_modrm25', 'scratch_v1'), ('grp0f01full_modrm25', 'zero_v1'), ('grp0f01full_modrme0', 'scratch_v1'), ('grp0f01full_modrme0', 'zero_v1'), ('grp0f01full_modrme1', 'zero_v1')]
+  {'d153-system': 'BOUNDARY_PF', 'debian': 'GP_OR_PF', 'fuzzarch': 'BOUNDARY_PF', 'imac': 'BOUNDARY_PF', 'lily': 'GP_OR_PF', 'z420': 'BOUNDARY_PF'}: 4 encodings, e.g. [('grp0f01full_modrm05', 'scratch_v1'), ('grp0f01full_modrm05', 'zero_v1'), ('grp0f01full_modrm0d', 'scratch_v1'), ('grp0f01full_modrm0d', 'zero_v1')]
+  {'d153-system': 'NONE', 'debian': 'NONE', 'fuzzarch': 'NONE', 'imac': 'GP_OR_PF', 'lily': 'GP_OR_PF', 'z420': 'GP_OR_PF'}: 4 encodings, e.g. [('map66_a3', 'scratch_v1'), ('map66_ab', 'scratch_v1'), ('map66_b3', 'scratch_v1'), ('map66_bb', 'scratch_v1')]
+  {'d153-system': 'GP_OR_PF', 'debian': 'UD', 'fuzzarch': 'UD', 'imac': 'UD', 'lily': 'UD', 'z420': 'UD'}: 2 encodings, e.g. [('grp0f01full_modrmd5', 'scratch_v1'), ('grp0f01full_modrmd5', 'zero_v1')]
+  {'d153-system': 'NONE', 'debian': 'UD', 'fuzzarch': 'UD', 'imac': 'UD', 'lily': 'UD', 'z420': 'UD'}: 2 encodings, e.g. [('grp0f01full_modrmd6', 'scratch_v1'), ('grp0f01full_modrmd6', 'zero_v1')]
+  {'d153-system': 'NONE', 'debian': 'GP_OR_PF', 'fuzzarch': 'NONE', 'imac': 'NONE', 'lily': 'NONE', 'z420': 'UD'}: 1 encodings, e.g. [('crypto_gather_avx2_vpgatherdd', 'scratch_v1')]

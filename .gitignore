@@ -1,0 +1,31 @@
+# build artifacts
+*.o
+*.a
+core/injector/injector
+core/tests/smoke
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# LaTeX build output (report.pdf itself is committed; intermediates are not)
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.synctex.gz
+report/*.fls
+report/*.fdb_latexmk
+report/*.bak
+
+# the Domas whitepaper is third-party copyrighted conference material;
+# kept locally for reference (docs/papers/) but not redistributed here.
+# cite it instead (see docs/planning/EXTENSION_IDEAS.md and the report's
+# bibliography) or fetch your own copy from the Black Hat USA 2017 archive.
+docs/papers/*.pdf
+
+# editor/OS cruft
+.DS_Store
+*.swp

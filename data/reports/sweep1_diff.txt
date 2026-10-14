@@ -1,0 +1,18 @@
+== 4 runs loaded ==
+  d153-system      Intel(R) Core(TM) i7-9700T CPU @ 2.00GHz      microcode=0x104    n=823
+  debian           11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz microcode=0xbc     n=823
+  fuzzarch         Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz      microcode=0xf6     n=823
+  lily             11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz microcode=0xb6     n=823
+
+== 5 / 823 encodings diverge across runs ==
+
+  avx512_kmovw_k0_eax  enc=c5f893c0                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE
+  avx512_vaddps_zmm    enc=62f17c4858c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE
+  avx512_vcmpeqps_k0   enc=62f17c48c2c100                   d153-system=7/UD  debian=7/NONE  fuzzarch=7/UD  lily=7/NONE
+  avx512_vmulpd_zmm    enc=62f1fd4859c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE
+  avx512_vpaddd_zmm    enc=62f17d48fec1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE
+
+(* = post-execution RIP left the arena, e.g. a control-flow instr like ret/jmp -- expected, not a bug)
+
+== divergence patterns (fault-class tuple -> count) ==
+  {'d153-system': 'UD', 'debian': 'NONE', 'fuzzarch': 'UD', 'lily': 'NONE'}: 5 encodings, e.g. ['avx512_kmovw_k0_eax', 'avx512_vaddps_zmm', 'avx512_vcmpeqps_k0', 'avx512_vmulpd_zmm', 'avx512_vpaddd_zmm']

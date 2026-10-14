@@ -1,0 +1,104 @@
+== 5 runs loaded ==
+  d153-system      Intel(R) Core(TM) i7-9700T CPU @ 2.00GHz      microcode=0x104    n=5378
+  debian           11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz microcode=0xbc     n=5378
+  fuzzarch         Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz      microcode=0xf6     n=5378
+  lily             11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz microcode=0xb6     n=5378
+  z420             Intel(R) Xeon(R) CPU E5-1607 0 @ 3.00GHz      microcode=0x71a    n=5378
+
+== 84 / 5378 (label,state) rows diverge across runs ==
+
+  avx512_kmovw_k0_eax      state=scratch_v1  enc=c5f893c0                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  avx512_kmovw_k0_eax      state=zero_v1     enc=c5f893c0                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  avx512_vaddps_zmm        state=scratch_v1  enc=62f17c4858c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  avx512_vaddps_zmm        state=zero_v1     enc=62f17c4858c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  avx512_vcmpeqps_k0       state=scratch_v1  enc=62f17c48c2c100                   d153-system=7/UD  debian=7/NONE  fuzzarch=7/UD  lily=7/NONE  z420=2/UD
+  avx512_vcmpeqps_k0       state=zero_v1     enc=62f17c48c2c100                   d153-system=7/UD  debian=7/NONE  fuzzarch=7/UD  lily=7/NONE  z420=2/UD
+  avx512_vmulpd_zmm        state=scratch_v1  enc=62f1fd4859c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  avx512_vmulpd_zmm        state=zero_v1     enc=62f1fd4859c1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  avx512_vpaddd_zmm        state=scratch_v1  enc=62f17d48fec1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  avx512_vpaddd_zmm        state=zero_v1     enc=62f17d48fec1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  feat_avx2_vpaddd_ymm     state=scratch_v1  enc=c5fdfec1                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  lily=4/NONE  z420=4/UD
+  feat_avx2_vpaddd_ymm     state=zero_v1     enc=c5fdfec1                         d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  lily=4/NONE  z420=4/UD
+  feat_avx512bitalg_vpopcntb state=scratch_v1  enc=62f27d4854c0                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  feat_avx512bitalg_vpopcntb state=zero_v1     enc=62f27d4854c0                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  feat_avx512vnni_vpdpbusd state=scratch_v1  enc=62f2754850c2                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  feat_avx512vnni_vpdpbusd state=zero_v1     enc=62f2754850c2                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  feat_bmi1_andn           state=scratch_v1  enc=c4e2c0f2c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi1_andn           state=zero_v1     enc=c4e2c0f2c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi2_pdep           state=scratch_v1  enc=c4e2c3f5c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi2_pdep           state=zero_v1     enc=c4e2c3f5c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi2_pext           state=scratch_v1  enc=c4e2c2f5c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  lily=5/NONE  z420=5/UD
+  feat_bmi2_pext           state=zero_v1     enc=c4e2c2f5c6                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  lily=5/NONE  z420=5/UD
+  feat_fma_vfmadd132ps     state=scratch_v1  enc=c4e26d98c1                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  lily=5/NONE  z420=5/UD
+  feat_fma_vfmadd132ps     state=zero_v1     enc=c4e26d98c1                       d153-system=5/NONE  debian=5/NONE  fuzzarch=5/NONE  lily=5/NONE  z420=5/UD
+  feat_gfni_vgf2p8affineqb state=scratch_v1  enc=c4e3f9cec100                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=6/UD
+  feat_gfni_vgf2p8affineqb state=zero_v1     enc=c4e3f9cec100                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=6/UD
+  feat_shani_sha256rnds2   state=scratch_v1  enc=0f38cbc1                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  feat_shani_sha256rnds2   state=zero_v1     enc=0f38cbc1                         d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  feat_vaes_vaesenc_zmm    state=scratch_v1  enc=62f27d48dcc1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  feat_vaes_vaesenc_zmm    state=zero_v1     enc=62f27d48dcc1                     d153-system=6/UD  debian=6/NONE  fuzzarch=6/UD  lily=6/NONE  z420=2/UD
+  grp_0f00_reg0            state=scratch_v1  enc=0f00c0                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp_0f00_reg0            state=zero_v1     enc=0f00c0                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp_0f00_reg1            state=scratch_v1  enc=0f00c8                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp_0f00_reg1            state=zero_v1     enc=0f00c8                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp_0f01_reg4            state=scratch_v1  enc=0f01e0                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp_0f01_reg4            state=zero_v1     enc=0f01e0                           d153-system=3/NONE  debian=5/GP_OR_PF  fuzzarch=3/NONE  lily=5/GP_OR_PF  z420=3/NONE
+  grp_0fc7_reg6            state=scratch_v1  enc=0fc7f0                           d153-system=3/NONE  debian=3/NONE  fuzzarch=3/NONE  lily=3/NONE  z420=3/UD
+  grp_0fc7_reg6            state=zero_v1     enc=0fc7f0                           d153-system=3/NONE  debian=3/NONE  fuzzarch=3/NONE  lily=3/NONE  z420=3/UD
+  grp_0fc7_reg7            state=scratch_v1  enc=0fc7f8                           d153-system=3/NONE  debian=3/NONE  fuzzarch=3/NONE  lily=3/NONE  z420=3/UD
+  grp_0fc7_reg7            state=zero_v1     enc=0fc7f8                           d153-system=3/NONE  debian=3/NONE  fuzzarch=3/NONE  lily=3/NONE  z420=3/UD
+  map0_0f                  state=scratch_v1  enc=0f                               d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  lily=5/NONE  z420=3/NONE
+  map0f_00                 state=scratch_v1  enc=0f00                             d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  lily=5/NONE  z420=3/NONE
+  map0f_01                 state=scratch_v1  enc=0f01                             d153-system=3/NONE  debian=5/NONE  fuzzarch=3/NONE  lily=5/NONE  z420=3/NONE
+  map0f_78                 state=scratch_v1  enc=0f78                             d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  map0f_78                 state=zero_v1     enc=0f78                             d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  map0f_79                 state=scratch_v1  enc=0f79                             d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  map0f_79                 state=zero_v1     enc=0f79                             d153-system=3/GP_OR_PF  debian=3/GP_OR_PF  fuzzarch=3/GP_OR_PF  lily=3/GP_OR_PF  z420=3/UD
+  map38_c8                 state=scratch_v1  enc=0f38c8                           d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  map38_c8                 state=zero_v1     enc=0f38c8                           d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  map38_c9                 state=scratch_v1  enc=0f38c9                           d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  map38_c9                 state=zero_v1     enc=0f38c9                           d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  map38_ca                 state=scratch_v1  enc=0f38ca                           d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  map38_ca                 state=zero_v1     enc=0f38ca                           d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  map38_cb                 state=scratch_v1  enc=0f38cb                           d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  map38_cb                 state=zero_v1     enc=0f38cb                           d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  map38_cc                 state=scratch_v1  enc=0f38cc                           d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  map38_cc                 state=zero_v1     enc=0f38cc                           d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  map38_cd                 state=scratch_v1  enc=0f38cd                           d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  map38_cd                 state=zero_v1     enc=0f38cd                           d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  map38_f0                 state=scratch_v1  enc=0f38f0                           d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  lily=4/NONE  z420=4/UD
+  map38_f0                 state=zero_v1     enc=0f38f0                           d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  lily=4/GP_OR_PF  z420=4/UD
+  map38_f1                 state=scratch_v1  enc=0f38f1                           d153-system=4/NONE  debian=4/NONE  fuzzarch=4/NONE  lily=4/NONE  z420=4/UD
+  map38_f1                 state=zero_v1     enc=0f38f1                           d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  lily=4/GP_OR_PF  z420=4/UD
+  map38_f9                 state=scratch_v1  enc=0f38f9                           d153-system=4/UD  debian=4/NONE  fuzzarch=4/UD  lily=4/NONE  z420=4/UD
+  map38_f9                 state=zero_v1     enc=0f38f9                           d153-system=4/UD  debian=4/GP_OR_PF  fuzzarch=4/UD  lily=4/GP_OR_PF  z420=4/UD
+  map3a_cc                 state=scratch_v1  enc=0f3acc                           d153-system=5/UD  debian=5/NONE  fuzzarch=5/UD  lily=5/NONE  z420=5/UD
+  map3a_cc                 state=zero_v1     enc=0f3acc                           d153-system=5/UD  debian=5/GP_OR_PF  fuzzarch=5/UD  lily=5/GP_OR_PF  z420=5/UD
+  map66_00                 state=scratch_v1  enc=660f00                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  map66_01                 state=scratch_v1  enc=660f01                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  map66_a3                 state=scratch_v1  enc=660fa3                           d153-system=4/GP_OR_PF  debian=4/NONE  fuzzarch=4/GP_OR_PF  lily=4/NONE  z420=4/NONE
+  map66_ab                 state=scratch_v1  enc=660fab                           d153-system=4/GP_OR_PF  debian=4/NONE  fuzzarch=4/GP_OR_PF  lily=4/NONE  z420=4/NONE
+  map66_b3                 state=scratch_v1  enc=660fb3                           d153-system=4/GP_OR_PF  debian=4/NONE  fuzzarch=4/GP_OR_PF  lily=4/NONE  z420=4/NONE
+  map66_bb                 state=scratch_v1  enc=660fbb                           d153-system=4/GP_OR_PF  debian=4/NONE  fuzzarch=4/GP_OR_PF  lily=4/NONE  z420=4/NONE
+  mapF2_00                 state=scratch_v1  enc=f20f00                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  mapF2_01                 state=scratch_v1  enc=f20f01                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  mapF3_00                 state=scratch_v1  enc=f30f00                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  mapF3_01                 state=scratch_v1  enc=f30f01                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  rexmap0_0f               state=scratch_v1  enc=480f                             d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  rexmap0f_00              state=scratch_v1  enc=480f00                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  rexmap0f_01              state=scratch_v1  enc=480f01                           d153-system=4/NONE  debian=6/NONE  fuzzarch=4/NONE  lily=6/NONE  z420=4/NONE
+  rexmap0f_78              state=scratch_v1  enc=480f78                           d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  lily=4/GP_OR_PF  z420=4/UD
+  rexmap0f_78              state=zero_v1     enc=480f78                           d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  lily=4/GP_OR_PF  z420=4/UD
+  rexmap0f_79              state=scratch_v1  enc=480f79                           d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  lily=4/GP_OR_PF  z420=4/UD
+  rexmap0f_79              state=zero_v1     enc=480f79                           d153-system=4/GP_OR_PF  debian=4/GP_OR_PF  fuzzarch=4/GP_OR_PF  lily=4/GP_OR_PF  z420=4/UD
+
+(* = post-execution RIP left the arena, e.g. a control-flow instr like ret/jmp -- expected, not a bug)
+
+== divergence patterns (fault-class tuple -> count) ==
+  {'d153-system': 'UD', 'debian': 'NONE', 'fuzzarch': 'UD', 'lily': 'NONE', 'z420': 'UD'}: 28 encodings, e.g. [('avx512_kmovw_k0_eax', 'scratch_v1'), ('avx512_kmovw_k0_eax', 'zero_v1'), ('avx512_vaddps_zmm', 'scratch_v1'), ('avx512_vaddps_zmm', 'zero_v1'), ('avx512_vcmpeqps_k0', 'scratch_v1')]
+  {'d153-system': 'NONE', 'debian': 'NONE', 'fuzzarch': 'NONE', 'lily': 'NONE', 'z420': 'UD'}: 16 encodings, e.g. [('feat_avx2_vpaddd_ymm', 'scratch_v1'), ('feat_avx2_vpaddd_ymm', 'zero_v1'), ('feat_bmi1_andn', 'scratch_v1'), ('feat_bmi1_andn', 'zero_v1'), ('feat_bmi2_pdep', 'scratch_v1')]
+  {'d153-system': 'NONE', 'debian': 'NONE', 'fuzzarch': 'NONE', 'lily': 'NONE', 'z420': 'NONE'}: 12 encodings, e.g. [('map0_0f', 'scratch_v1'), ('map0f_00', 'scratch_v1'), ('map0f_01', 'scratch_v1'), ('map66_00', 'scratch_v1'), ('map66_01', 'scratch_v1')]
+  {'d153-system': 'GP_OR_PF', 'debian': 'GP_OR_PF', 'fuzzarch': 'GP_OR_PF', 'lily': 'GP_OR_PF', 'z420': 'UD'}: 10 encodings, e.g. [('map0f_78', 'scratch_v1'), ('map0f_78', 'zero_v1'), ('map0f_79', 'scratch_v1'), ('map0f_79', 'zero_v1'), ('map38_f0', 'zero_v1')]
+  {'d153-system': 'UD', 'debian': 'GP_OR_PF', 'fuzzarch': 'UD', 'lily': 'GP_OR_PF', 'z420': 'UD'}: 8 encodings, e.g. [('map38_c8', 'zero_v1'), ('map38_c9', 'zero_v1'), ('map38_ca', 'zero_v1'), ('map38_cb', 'zero_v1'), ('map38_cc', 'zero_v1')]
+  {'d153-system': 'NONE', 'debian': 'GP_OR_PF', 'fuzzarch': 'NONE', 'lily': 'GP_OR_PF', 'z420': 'NONE'}: 6 encodings, e.g. [('grp_0f00_reg0', 'scratch_v1'), ('grp_0f00_reg0', 'zero_v1'), ('grp_0f00_reg1', 'scratch_v1'), ('grp_0f00_reg1', 'zero_v1'), ('grp_0f01_reg4', 'scratch_v1')]
+  {'d153-system': 'GP_OR_PF', 'debian': 'NONE', 'fuzzarch': 'GP_OR_PF', 'lily': 'NONE', 'z420': 'NONE'}: 4 encodings, e.g. [('map66_a3', 'scratch_v1'), ('map66_ab', 'scratch_v1'), ('map66_b3', 'scratch_v1'), ('map66_bb', 'scratch_v1')]
